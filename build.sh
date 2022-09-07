@@ -1,1 +1,1 @@
-gcc vuln.c -o vuln
+make all
