@@ -9,6 +9,6 @@ int main(int argc, char **argv){
         int n = atoi(argv[1]);
         char buff[256];
         memset(buff, 0, sizeof(buff));
-        strncpy(buff, argv[2], 300);
+        strncpy(buff, argv[2], n);
         printf("%s\n",buff);
 }
