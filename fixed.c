@@ -9,10 +9,13 @@ int main(int argc, char **argv)
         return 1;
     }
     int n = atoi(argv[1]);
-    char buff[256];
-    memset(buff, 0, sizeof(buff));
-    char *buff2 = malloc(n);
-    memset(buff2, 1, n);
-    memcpy(buff, buff2, n);
-    printf("%s\n", buff);
+    char fixed_arr_buff[256];
+    memset(fixed_arr_buff, 0, sizeof(fixed_arr_buff));
+    char *fixed_buff = malloc(256);
+    memset(fixed_buff, 0, sizeof(fixed_arr_buff));
+    char *buff_dynamic = malloc(n);
+    memset(buff_dynamic, 1, n);
+    memcpy(fixed_arr_buff, buff_dynamic, n);
+    memcpy(fixed_buff, buff_dynamic, n);
+    printf("%s\n", fixed_arr_buff);
 }
